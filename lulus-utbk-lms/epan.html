@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Deskripsi Post</title>
+</head>
+<body>
+  <!-- try start -->
+  <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Forum Diskusi</h2>
+            <div id="comments-container">
+                <!-- Komentar akan ditampilkan di sini -->
+            </div>
+            <hr>
+            <div class="mb-3">
+                <label for="comment">Tambahkan Komentar:</label>
+                <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary" onclick="addComment()">Kirim Komentar</button>
+        </div>
+    </div>
+</div>
+  <!-- try end -->
+
+    <div class="container mt-5">
+        <h1>Deskripsi Post</h1>
+        <form id="description-form">
+            <div class="mb-3">
+                <label for="description" class="form-label">Deskripsi:</label>
+                <textarea class="form-control" id="description" rows="5" placeholder="Tulis deskripsi disini..." required></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="postDescription()">Post Deskripsi</button>
+        </form>
+        <div id="description-container" class="mt-4">
+            <!-- Deskripsi akan ditampilkan di sini -->
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="comment-container" id="commentsContainer">
+        <!-- Komentar-komentar akan ditampilkan di sini -->
+      </div>
+    
+      <!-- Form untuk menambahkan komentar baru -->
+      <div>
+        <label id="commentInput" for="commentInput" class="form-label">Tambah Komentar:</label>
+        <input type="text" class="form-control" id="commentInput">
+        <button class="btn btn-secondary mt-2" onclick="addComment()">Komentar</button>
+      </div>
+    </div>
+
+    <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Komentar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="comments-container">
+                <!-- Komentar akan ditampilkan di sini -->
+            </div>
+            <form id="comment-form">
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Komentar:</label>
+                    <textarea class="form-control" id="commentModal" rows="3" required></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" style="margin-bottom: 2%;" onclick="addComment()">Tambah Komentar</button>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+      </div>
+    </div>
+       
+        
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- try start -->
+<script>
+  function addComment() {
+      // Mendapatkan nilai komentar dari textarea
+      var commentText = document.getElementById('comment').value;
+
+      // Membuat elemen baru untuk komentar
+      var commentElement = document.createElement('div');
+      commentElement.className = 'alert alert-secondary';
+      commentElement.innerHTML = commentText;
+
+      // Menambahkan elemen komentar ke dalam container komentar
+      document.getElementById('comments-container').appendChild(commentElement);
+
+      // Mengosongkan textarea setelah komentar dikirim
+      document.getElementById('comment').value = '';
+  }
+</script>
+<!-- try end -->
+
+<script>
+  // Fungsi untuk memposting deskripsi
+function postDescription() {
+    const descriptionText = document.getElementById('description').value;
+
+    if (descriptionText) {
+        const description = {
+            username: 'Alex',
+            descriptionText: descriptionText,
+            date: new Date(),
+            avatar: 'img/user.jpg', // Ganti dengan path yang sesuai
+            button: ''
+        };
+
+        displayDescription(description);
+        clearForm();
+    } else {
+        alert('Harap isi kolom deskripsi!');
+    }
+}
+
+// Fungsi untuk menampilkan deskripsi
+function displayDescription(description) {
+    const descriptionContainer = document.getElementById('description-container');
+    
+    const descriptionDiv = document.createElement('div');
+    descriptionDiv.classList.add('mb-3', 'p-3', 'border', 'border-secondary', 'rounded');
+
+    const userHeader = document.createElement('div');
+    userHeader.classList.add('d-flex', 'justify-content-between', 'align-items-center');
+
+    const userInfo = document.createElement('div');
+    userInfo.classList.add('d-flex', 'align-items-center');
+
+    const avatarImg = document.createElement('img');
+    avatarImg.src = description.avatar;
+    avatarImg.alt = 'Avatar';
+    avatarImg.classList.add('avatar-img');
+
+    const usernameElement = document.createElement('h5');
+    usernameElement.textContent = description.username;
+
+    const dateElement = document.createElement('p');
+    dateElement.textContent = formatDate(description.date);
+
+    const descriptionTextElement = document.createElement('p');
+    descriptionTextElement.className = 'style justify-content-center';
+    descriptionTextElement.textContent = description.descriptionText;
+
+    const buttonComment = document.createElement('button');
+  buttonComment.className = 'btn btn-primary d-flex align-items-center p-2 mt-3 mb-0';
+  buttonComment.setAttribute('role', 'button');
+  buttonComment.innerText = 'Komentar';
+  buttonComment.setAttribute('data-bs-toggle', 'modal');
+  buttonComment.setAttribute("href", "#exampleModal");
+  buttonComment.setAttribute('onclick', 'myFunction()');
+
+  const breakComment = document.createElement('hr');
+    breakComment.textContent = description.break ;
+
+
+    descriptionTextElement.appendChild(breakComment);
+    descriptionTextElement.appendChild(buttonComment);
+
+    userInfo.appendChild(avatarImg);
+    userInfo.appendChild(usernameElement);
+
+    userHeader.appendChild(userInfo);
+    userHeader.appendChild(dateElement);
+
+    descriptionDiv.appendChild(userHeader);
+    descriptionDiv.appendChild(descriptionTextElement);
+
+    descriptionContainer.appendChild(descriptionDiv);
+}
+
+// Fungsi untuk membersihkan formulir setelah memposting deskripsi
+function clearForm() {
+    document.getElementById('description').value = '';
+}
+
+// Fungsi untuk memformat tanggal
+function formatDate(date) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Intl.DateTimeFormat('en-US', options).format(date);
+}
+
+function myFunction(){
+  document.getElementById('#exampleModal');
+}
+</script>
+
+<script>
+  // Data komentar awal
+  var commentsData = [
+    // {
+    //   username: "User1",
+    //   date: "12 November 2023",
+    //   text: "Ini adalah komentar pertama. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    //   avatar: "path/to/user1/avatar.jpg"
+    // },
+    // {
+    //   username: "User2",
+    //   date: "13 November 2023",
+    //   text: "Ini adalah komentar kedua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    //   avatar: "path/to/user2/avatar.jpg"
+    // }
+  ];
+
+  // Fungsi untuk menampilkan komentar-komentar
+  function displayComments() {
+    var commentsInput= document.getElementById("commentsInput");
+    commentsInput.innerHTML = "";
+
+    commentsData.forEach(function(comment) {
+      var commentDiv = document.createElement("div");
+      commentDiv.classList.add("comment", "mb-3");
+
+      // Isi informasi pengguna
+      var userDiv = document.createElement("div");
+      userDiv.classList.add("user-info");
+      userDiv.innerHTML = `
+        <img src="${comment.avatar}" alt="${comment.username}'s Avatar">
+        <div>
+          <p><strong>Username:</strong> ${comment.username}</p>
+          <p><strong>Tanggal Unggah:</strong> ${comment.date}</p>
+        </div>
+      `;
+      commentDiv.appendChild(userDiv);
+
+      // Isi teks komentar
+      var commentText = document.createElement("p");
+      commentText.textContent = comment.text;
+      commentDiv.appendChild(commentText);
+
+      // Tambahkan komentar ke dalam kontainer komentar
+      commentsInput.appendChild(commentDiv);
+    });
+  }
+
+  // Fungsi untuk menambahkan komentar baru
+  function addComment() {
+    var commentInput = document.getElementById("commentInput").value;
+
+    // Simpan data komentar baru
+    if (commentText) {
+        var newComment = {
+            username: 'ALEX',
+            commentText: commentText,
+            date: new Date(),
+            avatar: 'img/user.jpg' // Ganti dengan path yang sesuai
+        };
+
+        comments.push(comment);
+        displayComments();
+        clearForm();
+    } 
+    else {
+        alert('Harap isi kolom komentar!');
+    }
+    commentsData.push(newComment);
+
+    // Render ulang komentar-komentar
+    // renderComments();
+
+    // Bersihkan input setelah menambahkan komentar
+    document.getElementById("commentInput").value = "";
+  }
+
+  // Fungsi untuk mendapatkan tanggal saat ini dalam format yang diinginkan
+  function getCurrentDate() {
+    var currentDate = new Date();
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return currentDate.toLocaleDateString('en-US', options);
+  }
+
+  // Render komentar-komentar saat halaman dimuat
+  // renderComments();
+</script>

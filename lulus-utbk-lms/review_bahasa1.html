@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>LULUS UTBK Learning Management System</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>LULUS UTBK</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Alexander Aji</h6>
+                        <span>Student</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="index.html" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="jenissoal.html" class="nav-item nav-link"><i class="fa fa-book-open me-2"></i>Soal Latihan</a>
+                    <a href="hasilnilai.html" class="nav-item nav-link active"><i class="fa fa-list-ol"></i>Hasil Nilai</a>
+                    <a href="diskusi.html" class="nav-item nav-link"><i class="fa fa-comments"></i>Diskusi</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">Alexander Aji</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="profile.html" class="dropdown-item">Profil</a>
+                            <a href="D:\SKRIPSI\LULUS UTBK\lulus-utbk-web\index.html" class="dropdown-item">Keluar</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+
+
+            <!-- Blank Start -->
+            
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="card ps-3 bg-light rounded">
+                    <div class="h-100 d-flex pt-3 ">
+                        <div class="col-2" ><h6>Waktu pengerjaan</h6> </div>
+                        <div class="col-10"> <h6>: 24 November 2023</h6></div>
+                    </div>
+                    <div class="h-100 bg-light rounded d-flex  ">
+                        <div class="col-2"><h6>Jumlah soal benar</h6> </div>
+                        <div class="col-10"> <h6>: 4</h6></div>
+                    </div>
+                    <div class="h-100 bg-light rounded d-flex  ">
+                        <div class="col-2"><h6>Jumlah soal salah</h6> </div>
+                        <div class="col-10"><h6>: 1</h6></div>
+                    </div>
+                    <div class="h-100 bg-light rounded d-flex  ">
+                        <div class="col-2"><h6>Nilai </h6> </div>
+                        <div class="col-10"><h6>: 80</h6></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="card border-2 bg-light">
+
+                    <!-- <div class="row"> -->
+                        <div class="h-100 bg-light rounded pt-1 ps-2">
+                            <h5 style="padding-bottom: 1%;">Soal 1</h5>
+                            <h7 style="padding-bottom: 5%;"><strong>Bacaan untuk soal nomor 1-3.</strong>
+                            <p>
+                                Infection caused by a bacterial organism (called Chlamydophila felis) is feline Chlamydial conjunctivitis. 
+                                The most common signs of chlamydia in cats involve the eyes or upper respiratory tract (nose or throat), 
+                                and only if the infection is left untreated does it spread to the lungs. Because chlamydia lives inside the body’s cells 
+                                and cannot survive long in the environment, the spread of infection depends on direct or close contact with an infected cat. 
+                                After infection, the incubation period (time between infection and development of clinical signs of disease) is between three and ten days.
+                            </p>
+                            <p>
+                                The bacteria mainly infect the conjunctiva, which is the delicate membrane that lines the eyelids and covers the edges of the eyeball. 
+                                The infection causes inflammation known as conjunctivitis. In a normal cat, the conjunctiva is not easily visible and is a pale salmon pink. 
+                                Cats with conjunctivitis, the conjunctiva becomes swollen and red making it more very visible. 
+                                The nictitating membrane or third eyelid at the inner corner of the eye may protrude partially in the eye.
+                                One or both eyes may be involved.
+                            </p>
+                            <p>
+                                Affected cats initially have a watery discharge from the eye that quickly becomes thicker and is usually yellow or greenish in color. 
+                                Eye discomfort and cats often cover the affected eye. Many cats remain bright and appear normal, but some may develop a fever or lose their appetite. 
+                                After a day or two, runny nose and sneezing may also occur. 
+                                In kittens, the infection can spread to the lungs and cause fatal pneumonia.
+                            </p>
+                            <p>
+                                What does the text mainly deal with?
+                            </p>
+                            </h7>
+                            
+                        </div>
+                        <div class="card border-1 ps-2 mb-1">
+                            <div class="h-100 rounded d-flex pt-2 ">
+                                <div class="col-1"><h6>A.</h6></div>
+                                <div class="col-10"><h6>The process of chlamydia affliction in cats</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>B.</h6></div>
+                                <div class="col-10"><h6>The symptoms of feline chlamydial conjunctivitis</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 border-danger ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2 mb-1">
+                                <div class="col-1"><h6>C.</h6></div>
+                                <div class="col-10"><h6>Clinical signs of feline chlamydial conjunctivitis</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="fa fa-times-circle" style="color: red;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 border-success ps-2  mb-1" >
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>D.</h6></div>
+                                <div class="col-10"><h6>An overview of feline chlamydial conjunctivitis</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="fa fa-check-circle" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="card border-2 bg-light">
+
+                    <!-- <div class="row"> -->
+                        <div class="h-100 bg-light rounded pt-1 ps-2">
+                            <h5 style="padding-bottom: 1%;">Soal 2</h5>
+                            <h7 style="padding-bottom: 5%;"><p>In the second paragraph, the word inflammation most nearly means ....</p></h7>
+                            
+                        </div>
+                        <div class="card border-1 border-success ps-2 mb-1">
+                            <div class="h-100 rounded d-flex pt-2 ">
+                                <div class="col-1"><h6>A.</h6></div>
+                                <div class="col-10"><h6>Swelling</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="fa fa-check-circle" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>B.</h6></div>
+                                <div class="col-10"><h6>Scrape</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2 mb-1">
+                                <div class="col-1"><h6>C.</h6></div>
+                                <div class="col-10"><h6>Soreness</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: red;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1" >
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>D.</h6></div>
+                                <div class="col-10"><h6>Rash</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="card border-2 bg-light">
+
+                    <!-- <div class="row"> -->
+                        <div class="h-100 bg-light rounded pt-1 ps-2">
+                            <h5 style="padding-bottom: 1%;">Soal 3</h5>
+                            <h7 style="padding-bottom: 5%;"><p>One of the symptoms of feline chlamydial conjunctivitis is .... </p></h7>
+                            
+                        </div>
+                        <div class="card border-1 ps-2 mb-1">
+                            <div class="h-100 rounded d-flex pt-2 ">
+                                <div class="col-1"><h6>A.</h6></div>
+                                <div class="col-10"><h6>Eating Disorder</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>B.</h6></div>
+                                <div class="col-10"><h6>Laboured Breathing</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2 mb-1">
+                                <div class="col-1"><h6>C.</h6></div>
+                                <div class="col-10"><h6>Low Body Temperature</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: red;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 border-success ps-2  mb-1" >
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>D.</h6></div>
+                                <div class="col-10"><h6>Abnormal Eye Discharge</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="fa fa-check-circle" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="card border-2 bg-light">
+
+                    <!-- <div class="row"> -->
+                        <div class="h-100 bg-light rounded pt-1 ps-2">
+                            <h5 style="padding-bottom: 1%;">Soal 4</h5>
+                            <h7 style="padding-bottom: 5%;"><p>The factory management received many letters from the ... customers complimenting them in their new product.</p></h7>
+                            
+                        </div>
+                        <div class="card border-1 ps-2 mb-1">
+                            <div class="h-100 rounded d-flex pt-2 ">
+                                <div class="col-1"><h6>A.</h6></div>
+                                <div class="col-10"><h6>satisfies</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>B.</h6></div>
+                                <div class="col-10"><h6>satisfying</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2 mb-1">
+                                <div class="col-1"><h6>C.</h6></div>
+                                <div class="col-10"><h6>satisfyingly</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: red;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 border-success ps-2  mb-1" >
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>D.</h6></div>
+                                <div class="col-10"><h6>satisfied</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="fa fa-check-circle" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="card border-2 bg-light">
+
+                    <!-- <div class="row"> -->
+                        <div class="h-100 bg-light rounded pt-1 ps-2">
+                            <h5 style="padding-bottom: 1%;">Soal 5</h5>
+                            <h7 style="padding-bottom: 5%;"><p>The winner, ... bike was an unusual design, won a medal on the competition.</p></h7>
+                            
+                        </div>
+                        <div class="card border-1 border-success ps-2 mb-1">
+                            <div class="h-100 rounded d-flex pt-2 ">
+                                <div class="col-1"><h6>A.</h6></div>
+                                <div class="col-10"><h6>whose</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="fa fa-check-circle" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>B.</h6></div>
+                                <div class="col-10"><h6>of which</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1  ps-2  mb-1">
+                            <div class="h-100 rounded d-flex pt-2 mb-1">
+                                <div class="col-1"><h6>C.</h6></div>
+                                <div class="col-10"><h6>who</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: red;"></i></div>
+                            </div>
+                        </div>
+                        <div class="card border-1 ps-2  mb-1" >
+                            <div class="h-100 rounded d-flex pt-2">
+                                <div class="col-1"><h6>D.</h6></div>
+                                <div class="col-10"><h6>whom</h6></div>
+                                <div class="col-1 d-flex justify-content-center align-content-between"><i class="" style="color: green;"></i></div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+            <!-- Blank End -->
+
+
+            <!-- Footer Start -->
+            
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
