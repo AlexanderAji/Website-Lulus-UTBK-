@@ -7,6 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+	
+
+	<!-- Template Main CSS File -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	
 </head>
 <style>
     .quizPage {
@@ -27,12 +37,12 @@
     .bntQuest{
         width: 100%;
     }
-    .questDivLeft{
+    /* .questDivLeft{
         width: 12.5%;
-    }
-    .leftQuest{
+    } */
+    /* .leftQuest{
         margin-bottom: 10px;
-    }
+    } */
     .btnIndActive{
         background-color: #0d6efd;
         color: white;
@@ -53,16 +63,16 @@
     }
 </style>
 <body>
-    <div class="quizPage">
+    <div class="container-fluid p-3">
         <div class="row">
-            <div class="col-8" style="border:1px;">
-                <div class="card">
+            <div class="col-lg-8" style="border:1px;">
+                <div class="card mt-3">
                     <div class="container">
-                        <div class="row table-responsive" style="margin-bottom: -8%;">
-                            <div class="col-md-3 offset-xl-9 ">
-                                <div class="card text-bg-success">
+                        <div class="row mb-3">
+                            <div class="col-lg-3 col-lg-3 offset-lg-9 col-md-3 offset-md-10 col-sm-3 ">
+                                <div class="card text-bg-success ">
                                     <div class="card-body">
-                                        <div id="countdown" class="display-6"></div>
+                                        <div id="countdown" class="display-6 "></div>
                                     </div>
                                 </div>
                             </div>
@@ -71,11 +81,10 @@
                     <div class="card-body">
                         <div class="quest quest-active" id="quest1">
         
-                            <div class="col-5 d-">
+                            <div class="col-12 mb-3">
                                 <h3 class="card-title">Soal No 1</h3>
                             </div>
                             
-                            <br>
                             <p class="card-text">Di antara lima bilangan berikut yang nilainya paling kecil adalah</p>
                             <hr>
                             <div class="quizOption">
@@ -120,9 +129,9 @@
                         </div>
                         <!-- SOAL 2 -->
                         <div class="quest" id="quest2">
-                            <h3 class="card-title">Soal No 2</h3>
-                            
-                            <br>
+                            <div class="col-12 mb-3">
+                                <h3 class="card-title">Soal No 2</h3>
+                            </div>
                             <p class="card-text">Bilangan berikut yg nilainya terbesar adalah ....</p>
                             <hr>
                             <div class="quizOption">
@@ -167,8 +176,9 @@
                         </div>
                         <!-- SOAL 3 -->
                         <div class="quest" id="quest3">
-                            <h3 class="card-title">Soal No 3</h3>
-                            <br>
+                            <div class="col-12 mb-3">
+                                <h3 class="card-title">Soal No 3</h3>
+                            </div>
                             <p class="card-text">Untuk mengisi penuh sebuah bak air Ira membutuhkan 8 ember air. Jika Ola memiliki ember yang besarnya hanya setengah dari milik Ira, berapa ember air yang Ola butuhkan untuk mengisi penuh bak air tersebut.</p>
                             <hr>
                             <div class="quizOption">
@@ -213,8 +223,9 @@
                         </div>
                         <!-- SOAL 4 -->
                         <div class="quest" id="quest4">
+                            <div class="col-12 mb-3">
                                 <h3 class="card-title">Soal No 4</h3>
-                                <br>
+                            </div>
                             <p class="card-text">Diantara lima bilangan berikut yang nilainya paling kecil adalah ...</p>
                             <hr>
                             <div class="quizOption">
@@ -259,8 +270,9 @@
                         </div>
                         <!-- SOAL 5 -->
                         <div class="quest" id="quest5">
+                            <div class="col-12 mb-3">
                                 <h3 class="card-title">Soal No 5</h3>
-                            <br>
+                            </div>
                             <p class="card-text">q/(17,5%)=280/q Nilai q pada persamaan di atas adalah ...</p>
                             <hr>
                             <div class="quizOption">
@@ -308,67 +320,61 @@
                     </div>
                     <div class="card-footer">
                         <div class="row">
-                            <div class="col-4 ">
-                                <a href="#" class="btn btn-primary floatLeft" id="back_button">
-                                    Soal Sebelumnya
-                                </a>
+                            <div class="col-4">
+                                <a href="#" class="btn btn-primary float-left" id="back_button">Sebelumnya</a>
                             </div>
                             <div class="col-4">
-                                <center>
-                                    <a href="#" class="btn btn-warning" id="flag_button_1" onclick="flagQuest(window.activeQuest,1)">
-                                        Ragu-ragu
-                                    </a>
-                                    <a href="#" class="btn btn-warning" id="flag_button_0" onclick="flagQuest(window.activeQuest,0)">
-                                        Hapus Ragu-ragu
-                                    </a>
-                                </center>
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-warning" id="flag_button_1"
+                                        onclick="flagQuest(window.activeQuest,1)">Ragu-ragu</a>
+                                    <a href="#" class="btn btn-warning" id="flag_button_0"
+                                        onclick="flagQuest(window.activeQuest,0)">Hapus Ragu-ragu</a>
+                                </div>
                             </div>
                             <div class="col-4">
-                                <a href="#" class="btn btn-primary floatRight" id="next_button">
-                                    Soal Selanjutnya
-                                </a>
-                                <a href="#modalFinish" class="btn btn-success floatRight" id="finish_button" data-bs-toggle="modal" role="button">
-                                    Finish
-                                </a>
-                                <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#modalFinish" role="button">Open first modal</a> -->
+                                <a href="#" class="btn btn-primary float-right" id="next_button">Selanjutnya</a>
+                                <a href="#modalFinish" class="btn btn-success float-right" id="finish_button"
+                                    data-bs-toggle="modal" role="button">Finish</a>
                             </div>
                         </div>
-                      </div>
-                  </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4" style="border:1px;">
-                <div class="card">
+            <div class="col-lg-4">
+                <div class="card mt-3">
                     <div class="card-body">
                         <div class="row leftQuest">
                             <div class="questDivLeft"></div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc1" onclick="showPage(0)">1</a>
+                            <div class="col-3 col-md-2 col-sm-2 mb-2">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc1"
+                                    onclick="showPage(0)">1</a>
                             </div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest"  id="btnIndc2" onclick="showPage(1)">2</a>
+                            <div class="col-3 col-md-2 col-sm-2">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc2"
+                                    onclick="showPage(1)">2</a>
                             </div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest"  id="btnIndc3" onclick="showPage(2)">3</a>
+                            <div class="col-3 col-md-2 col-sm-2">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc3"
+                                    onclick="showPage(2)">3</a>
+                            </div>
+                            <div class="col-3 col-md-2 col-sm-2 ">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc4"
+                                    onclick="showPage(3)">4</a>
+                            </div>
+                            <div class="col-3 col-md-2 col-sm-2 ">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc5"
+                                    onclick="showPage(4)">5</a>
                             </div>
                         </div>
+                        <hr />
                         <div class="row leftQuest">
-                            <div class="questDivLeft"></div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest "  id="btnIndc4" onclick="showPage(3)">4</a>
-                            </div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest"  id="btnIndc5" onclick="showPage(4)">5</a>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row leftQuest">
-                            <div class="col-3">
+                            <div class="col-3 mb-2">
                                 <a href="#" class="btn btn-success bntQuest">Sudah</a>
                             </div>
                             <div class="col-6">: Sudah Dijawab</div>
-                        </div> 
+                        </div>
                         <div class="row leftQuest">
-                            <div class="col-3">
+                            <div class="col-3 mb-2">
                                 <a href="#" class="btn btn-warning bntQuest">Ragu</a>
                             </div>
                             <div class="col-6">: Ragu - ragu</div>
@@ -378,7 +384,7 @@
                                 <a href="#" class="btn btn-secondary bntQuest">Belum</a>
                             </div>
                             <div class="col-6">: Belum Dijawab</div>
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>
@@ -435,103 +441,105 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
     window.activeQuest = 0;
-    const prevButton = document.getElementById('back_button');
-    const nextButton = document.getElementById('next_button');
+        const prevButton = document.getElementById('back_button');
+        const nextButton = document.getElementById('next_button');
 
-    //mencari jumlah div yang menggunakan class quest
-    const pages = document.querySelectorAll('.quest');
-    const countQuest = 4;
-    let currentPage = 0;
+        // mencari jumlah div yang menggunakan class quest
+        const pages = document.querySelectorAll('.quest');
+        const countQuest = 4;
+        let currentPage = 0;
 
     // Fungsi untuk menampilkan halaman berdasarkan indeks
     function showPage(pageIndex) {
         window.activeQuest = pageIndex;
-        //ketika soal nomor 1 maka button Soal Sebelumnya dihidden
-        if(pageIndex==0){
-            $("#back_button").hide();
-        }else{
-            $("#back_button").show();
-        }
         
-        
-        //ketika soal nomor terakhir maka button Soal Selanjutnya dihidden dan button Finish di tampilkan
-        if(pageIndex==countQuest){
-            $("#next_button").hide();
-            $("#finish_button").show();
-        }else{
-            $("#next_button").show();
-            $("#finish_button").hide();
-        }
+        // ketika soal nomor 1 maka button Soal Sebelumnya dihidden
+        if (pageIndex === 0) {
+                prevButton.style.display = 'none';
+            } else {
+                prevButton.style.display = 'block';
+            }
 
-        // jika salah satu option di soal aktif di klik, maka button indikator ditambah class btn-success
-        $("input[name='optionQuest"+(parseInt(pageIndex)+1)+"']").change(function() {
-            resetBtnClass((parseInt(pageIndex)+1));
-            $("#btnIndc"+(parseInt(pageIndex)+1)).addClass("btn-success");
-        });
+            // ketika soal nomor terakhir maka button Soal Selanjutnya dihidden dan button Finish di tampilkan
+            if (pageIndex === countQuest) {
+                nextButton.style.display = 'none';
+                document.getElementById('finish_button').style.display = 'block';
+            } else {
+                nextButton.style.display = 'block';
+                document.getElementById('finish_button').style.display = 'none';
+            }
+
+            // jika salah satu option di soal aktif di klik, maka button indikator ditambah class btn-success
+            document.querySelectorAll("input[name='optionQuest" + (parseInt(pageIndex) + 1) + "']").forEach(function (el) {
+                el.addEventListener('change', function () {
+                    resetBtnClass(parseInt(pageIndex) + 1);
+                    document.getElementById("btnIndc" + (parseInt(pageIndex) + 1)).classList.add("btn-success");
+                });
+            });
 
         // jika indikator mempunyai class btnIndFlag maka button hapus ragu2 ditampilkan dan button ragu2 di hide
-        if($("#btnIndc"+(parseInt(pageIndex)+1)).hasClass('btnIndFlag')){
-            $("#flag_button_0").show();
-            $("#flag_button_1").hide();
-        }else{
-            $("#flag_button_0").hide();
-            $("#flag_button_1").show();
-        }
-
-        // looping sejumlah page kali
-        pages.forEach((page, index) => {
-            if (index === pageIndex) {
-                page.classList.add('quest-active');
-                $("#btnIndc"+(parseInt(index)+1)).addClass("btnIndActive");
+        if (document.getElementById("btnIndc" + (parseInt(pageIndex) + 1)).classList.contains('btnIndFlag')) {
+                document.getElementById("flag_button_0").style.display = 'block';
+                document.getElementById("flag_button_1").style.display = 'none';
             } else {
-                page.classList.remove('quest-active');
-                $("#btnIndc"+(parseInt(index)+1)).removeClass("btnIndActive");
+                document.getElementById("flag_button_0").style.display = 'none';
+                document.getElementById("flag_button_1").style.display = 'block';
             }
-        });
-    }
+
+            // looping sejumlah page kali
+            pages.forEach((page, index) => {
+                if (index === pageIndex) {
+                    page.classList.add('quest-active');
+                    document.getElementById("btnIndc" + (parseInt(index) + 1)).classList.add("btnIndActive");
+                } else {
+                    page.classList.remove('quest-active');
+                    document.getElementById("btnIndc" + (parseInt(index) + 1)).classList.remove("btnIndActive");
+                }
+            });
+        }
 
     // Event listener untuk tombol "Previous"
     prevButton.addEventListener('click', () => {
-        if (currentPage > 0) {
-            currentPage--;
-            showPage(currentPage);
-        }
-    });
+            if (currentPage > 0) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
 
-    // Event listener untuk tombol "Next"
-    nextButton.addEventListener('click', () => {
-        if (currentPage < pages.length - 1) {
-            currentPage++;
-            showPage(currentPage);
-        }
-    });
+        // Event listener untuk tombol "Next"
+        nextButton.addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
 
     // Tampilkan halaman pertama saat halaman dimuat
     showPage(currentPage);
 
     // fungsi untuk menandai ragu2
-    function flagQuest(index, status){
-        var indexNow = parseInt(index)+1;
-        if(status==1){
-            $("#flag_button_0").show();
-            $("#flag_button_1").hide();
+    function flagQuest(index, status) {
+            var indexNow = parseInt(index) + 1;
+            if (status === 1) {
+                document.getElementById("flag_button_0").style.display = 'block';
+                document.getElementById("flag_button_1").style.display = 'none';
 
-            $("#btnIndc"+index).removeClass("btnIndActive");
-            $("#btnIndc"+(indexNow)).addClass("btnIndFlag");
-        }else{
-            $("#flag_button_0").show();
-            $("#flag_button_1").hide();
+                document.getElementById("btnIndc" + index).classList.remove("btnIndActive");
+                document.getElementById("btnIndc" + (indexNow)).classList.add("btnIndFlag");
+            } else {
+                document.getElementById("flag_button_0").style.display = 'block';
+                document.getElementById("flag_button_1").style.display = 'none';
 
-            $("#btnIndc"+index).addClass("btnIndActive");
-            $("#btnIndc"+(indexNow)).removeClass("btnIndFlag");
-        }
-    };
+                document.getElementById("btnIndc" + index).classList.add("btnIndActive");
+                document.getElementById("btnIndc" + (indexNow)).classList.remove("btnIndFlag");
+            }
+        };
     
     // fungsi untuk menghapus class btn-secondary dan btn-success di button
-    function resetBtnClass(index){
-        $("#btnIndc"+index).removeClass("btn-secondary");
-        $("#btnIndc"+index).removeClass("btn-success");
-    }
+    function resetBtnClass(index) {
+            document.getElementById("btnIndc" + index).classList.remove("btn-secondary");
+            document.getElementById("btnIndc" + index).classList.remove("btn-success");
+        }
 
     // Set the target time for the countdown (10 minutes)
     const targetTime = new Date();
