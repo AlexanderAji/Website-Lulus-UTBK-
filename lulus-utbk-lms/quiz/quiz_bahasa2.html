@@ -27,12 +27,12 @@
     .bntQuest{
         width: 100%;
     }
-    .questDivLeft{
+    /* .questDivLeft{
         width: 12.5%;
-    }
-    .leftQuest{
+    } */
+    /* .leftQuest{
         margin-bottom: 10px;
-    }
+    } */
     .btnIndActive{
         background-color: #0d6efd;
         color: white;
@@ -53,16 +53,16 @@
     }
 </style>
 <body>
-    <div class="quizPage">
+    <div class="container-fluid p-3">
         <div class="row">
-            <div class="col-8" style="border:1px;">
-                <div class="card">
+            <div class="col-lg-8" style="border:1px;">
+                <div class="card mt-3">
                     <div class="container">
-                        <div class="row table-responsive" style="margin-bottom: -8%;">
-                            <div class="col-md-3 offset-xl-9 ">
-                                <div class="card text-bg-success">
+                        <div class="row mb-3">
+                            <div class="col-lg-3 col-lg-3 offset-lg-9 col-md-3 offset-md-10 col-sm-3 ">
+                                <div class="card text-bg-success ">
                                     <div class="card-body">
-                                        <div id="countdown" class="display-6"></div>
+                                        <div id="countdown" class="display-6 "></div>
                                     </div>
                                 </div>
                             </div>
@@ -70,12 +70,9 @@
                     </div>
                     <div class="card-body">
                         <div class="quest quest-active" id="quest1">
-        
-                            <div class="col-5 d-">
+                            <div class="col-12 mb-3">
                                 <h3 class="card-title">Soal No 1</h3>
                             </div>
-                            
-                            <br>
                             <p class="card-text"> Minyak sawit merupakan minyak kental berwarna merah kekuningan yang berasal dari buah kelapa sawit. 
                                 Minyak sawit berharga murah, mudah diproduksi, dan bersifat sangat stabil. 
                                 Akibatnya, minyak sawit banyak digunakan sebagai bahan baku dalam berbagai industri makanan, kosmetik, dan produk kebersihan. 
@@ -131,9 +128,9 @@
                         </div>
                         <!-- SOAL 2 -->
                         <div class="quest" id="quest2">
-                            <h3 class="card-title">Soal No 2</h3>
-                            
-                            <br>
+                            <div class="col-12 mb-3">
+                                <h3 class="card-title">Soal No 2</h3>
+                            </div>
                             <p class="card-text">Seseorang akan mengembangkan karangan yang bertema upaya meningkatkan kemampuan berwirausaha bagi remaja dengan kerangka karangan berikut:
                                 <br>(1) Saran bagi remaja untuk berwirausaha
                                 <br>(2) Pentingnya meningkatkan kemampuan wirausaha
@@ -186,8 +183,9 @@
                         </div>
                         <!-- SOAL 3 -->
                         <div class="quest" id="quest3">
-                            <h3 class="card-title">Soal No 3</h3>
-                            <br>
+                            <div class="col-12 mb-3">
+                                <h3 class="card-title">Soal No 3</h3>
+                            </div>
                             <p class="card-text">Baru-baru ini, tim peneliti dari University School of Medicine Washington berhasil mengidentifikasi protein plasmodium sp, yaitu parasit nyamuk yang menyebabkan penyakit malaria. Penemuan ini penting karena malaria kini menjadi pembunuh nomor tiga di dunia. Penyakit ini tercatat membunuh satu hingga tiga juta orang setiap tahun. </p>
                             <p>Paragraf di atas dapat diperbaiki dengan cara berikut, kecuali . . .</p>
                             <hr>
@@ -233,8 +231,9 @@
                         </div>
                         <!-- SOAL 4 -->
                         <div class="quest" id="quest4">
+                            <div class="col-12 mb-3">
                                 <h3 class="card-title">Soal No 4</h3>
-                                <br>
+                            </div>
                             <p class="card-text">
                                 Isi surat harus dinyatakan secara ringkas, jelas, dan eksplisit, agar . . .
                             </p>
@@ -281,8 +280,9 @@
                         </div>
                         <!-- SOAL 5 -->
                         <div class="quest" id="quest5">
+                            <div class="col-12 mb-3">
                                 <h3 class="card-title">Soal No 5</h3>
-                            <br>
+                            </div>
                             <p class="card-text">Penulisan salam pembuka yang benar adalah . . .</p>
                             <hr>
                             <div class="quizOption">
@@ -330,67 +330,61 @@
                     </div>
                     <div class="card-footer">
                         <div class="row">
-                            <div class="col-4 ">
-                                <a href="#" class="btn btn-primary floatLeft" id="back_button">
-                                    Soal Sebelumnya
-                                </a>
+                            <div class="col-4">
+                                <a href="#" class="btn btn-primary float-left" id="back_button">Sebelumnya</a>
                             </div>
                             <div class="col-4">
-                                <center>
-                                    <a href="#" class="btn btn-warning" id="flag_button_1" onclick="flagQuest(window.activeQuest,1)">
-                                        Ragu-ragu
-                                    </a>
-                                    <a href="#" class="btn btn-warning" id="flag_button_0" onclick="flagQuest(window.activeQuest,0)">
-                                        Hapus Ragu-ragu
-                                    </a>
-                                </center>
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-warning" id="flag_button_1"
+                                        onclick="flagQuest(window.activeQuest,1)">Ragu-ragu</a>
+                                    <a href="#" class="btn btn-warning" id="flag_button_0"
+                                        onclick="flagQuest(window.activeQuest,0)">Hapus Ragu-ragu</a>
+                                </div>
                             </div>
                             <div class="col-4">
-                                <a href="#" class="btn btn-primary floatRight" id="next_button">
-                                    Soal Selanjutnya
-                                </a>
-                                <a href="#modalFinish" class="btn btn-success floatRight" id="finish_button" data-bs-toggle="modal" role="button">
-                                    Finish
-                                </a>
-                                <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#modalFinish" role="button">Open first modal</a> -->
+                                <a href="#" class="btn btn-primary float-right" id="next_button">Selanjutnya</a>
+                                <a href="#modalFinish" class="btn btn-success float-right" id="finish_button"
+                                    data-bs-toggle="modal" role="button">Finish</a>
                             </div>
                         </div>
-                      </div>
-                  </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4" style="border:1px;">
-                <div class="card">
+            <div class="col-lg-4">
+                <div class="card mt-3">
                     <div class="card-body">
                         <div class="row leftQuest">
                             <div class="questDivLeft"></div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc1" onclick="showPage(0)">1</a>
+                            <div class="col-3 col-md-2 col-sm-2 mb-2">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc1"
+                                    onclick="showPage(0)">1</a>
                             </div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest"  id="btnIndc2" onclick="showPage(1)">2</a>
+                            <div class="col-3 col-md-2 col-sm-2">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc2"
+                                    onclick="showPage(1)">2</a>
                             </div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest"  id="btnIndc3" onclick="showPage(2)">3</a>
+                            <div class="col-3 col-md-2 col-sm-2">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc3"
+                                    onclick="showPage(2)">3</a>
+                            </div>
+                            <div class="col-3 col-md-2 col-sm-2 ">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc4"
+                                    onclick="showPage(3)">4</a>
+                            </div>
+                            <div class="col-3 col-md-2 col-sm-2 ">
+                                <a href="#" class="btn btn-secondary bntQuest" id="btnIndc5"
+                                    onclick="showPage(4)">5</a>
                             </div>
                         </div>
+                        <hr />
                         <div class="row leftQuest">
-                            <div class="questDivLeft"></div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest "  id="btnIndc4" onclick="showPage(3)">4</a>
-                            </div>
-                            <div class="col-3">
-                                <a href="#" class="btn btn-secondary bntQuest"  id="btnIndc5" onclick="showPage(4)">5</a>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row leftQuest">
-                            <div class="col-3">
+                            <div class="col-3 mb-2">
                                 <a href="#" class="btn btn-success bntQuest">Sudah</a>
                             </div>
                             <div class="col-6">: Sudah Dijawab</div>
-                        </div> 
+                        </div>
                         <div class="row leftQuest">
-                            <div class="col-3">
+                            <div class="col-3 mb-2">
                                 <a href="#" class="btn btn-warning bntQuest">Ragu</a>
                             </div>
                             <div class="col-6">: Ragu - ragu</div>
@@ -400,7 +394,7 @@
                                 <a href="#" class="btn btn-secondary bntQuest">Belum</a>
                             </div>
                             <div class="col-6">: Belum Dijawab</div>
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>
